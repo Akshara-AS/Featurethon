@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> My Rating-Bookie Mate</title>
+
+
+    <style>
+
+        .body{
+               background-color: #ffaaa7;
+        }
+       #container {
+            height: 400px;
+        
+        }
+    
+        .highcharts-figure,
+        .highcharts-data-table table {
+            min-width: 310px;
+            max-width: 800px;
+            margin: 1em auto;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-3d.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    
+    <figure class="highcharts-figure">
+        <div id="container"></div>
+        <p class="highcharts-description">
+            !! Your ratings for your books !!
+        </p>
+    
+    </figure>
+    
+
+
+    <!-- Custom script comes here-->
+    <script>
+
+            const chart = new Highcharts.Chart({
+            chart: {
+                renderTo: 'container',
+                type: 'bar',
+                options3d: {
+                    enabled: true,
+                    alpha: 9,
+                    beta: 11,
+                    depth: 40,
+                    viewDistance: 100
+                }
+            },
+            title: {
+                text: 'My Ratings'
+            },
+            colors: [
+                '#DE3163' 
+        ],
+
+            plotOptions: {
+                column: {
+                    depth: 25
+                }
+            },
+            
+            yAxis: {
+               title: {
+                    text: 'SCORE (Out of 10)'
+                    },
+                
+            },
+            xAxis: {
+                categories:['Wings of fire','Harry potter and the philosophers stone','Harry potter and the chamber of secrets','Harry Potter and the prisoner of Azkaban',
+                'Data Science for Business: What You Need to Know about Data Mining and Data-Analytic Thinking',
+                'Introduction to Machine Learning with Python: A Guide for Data Scientists','Capital in the Twenty-First Century','Arthashastra',
+                'Silappatikaram','Learning Japanese Kanji Practice Book Volume 1: The Quick and Easy Way to Learn the Basic Japanese Kanji','Mastering the Art of French Cooking','Southern Flavours',
+                'Aharam: Traditional Cuisine of Tamil Nadu','The Model Bakery Cookbook: 75 Favorite Recipes from the Beloved Napa Valley Bakery','Japanese Cookbook for Beginners: Classic and Modern Recipes Made Easy','Objective General English',
+                'How to Crack Test Of Reasoning- REVISED EDITION','The Moonstone','Middlemarch','The way we live now','The sign of the four',
+                'The Golden Bowl','Chanakya Neeti','Sivagaamiyin sabatham','Ponniyin selvan','Le Petit prince','Gunahon ka devtha',
+                'Indian Art and Culture for Civil Services and other Competitive Examinations','Jharkhand General Knowledge','Vadhargal Vendrargal']
+            },
+            series: [{
+                name: 'bookName',
+                data: [7,7,6,5,6,7,5,9,10,6,8,8,9,5,5,7,9,7,8,8,9,9,9,5,7,5,4,9]
+            }],
+        });
+
+        
+        showValues();
+
+
+    
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+
+-------------BOOK COLLECTION---------------
+
+ 1. First page :
+               
+               about us - website
+               my collection :                                           1.about -book
+                                alphabetical order ---book_list------    2.author + language + date
+                                author list        ---book_list-----     3.synopsis
+                                genre list        ---book_list------     4.genre
+                                                                         5.rating
+                                                                         6.source 
+                                                                         7.feedback                 
+               my progess     
+               statistics - graphs (visual)
+               feedback/comments
+               register/sign in  
+
